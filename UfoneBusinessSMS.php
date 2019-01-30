@@ -25,7 +25,7 @@ class UfoneBusinessSMS {
     public function __construct($msisdn, $shortcode, $password, $lang="English", $debug_level=false) {
         $this->shortcode    = $this->_cleanInput($shortcode); // I don't have specifics on how to verify shortcodes
         $this->lang         = $this->_cleanInput($lang);
-        $this->APIsecret    = (int)$this->_cleanInput($password);
+        $this->APIsecret    = $this->_cleanInput($password);
 
         // if there is a debug level, sure, lets roll with it
         if ($debug_level!=false) {
